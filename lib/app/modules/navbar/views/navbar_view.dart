@@ -43,17 +43,22 @@ class NavbarView extends GetView<NavbarController> {
                         },
                         child: Column(
                           children: [
-                            SizedBox(
-                              width: 25,
-                              height: 25,
-                              child: selectedIndex == 0
-                                  ? Image.asset(
-                                      'assets/icons/home_white.png',
-                                    )
-                                  : Image.asset(
+                            selectedIndex == 0
+                                ? Container(
+                                    width: 3.w,
+                                    height: 3.w,
+                                    decoration: BoxDecoration(
+                                      color: colorBlack,
+                                      borderRadius: BorderRadius.circular(50.w),
+                                    ),
+                                  )
+                                : SizedBox(
+                                    width: 25,
+                                    height: 25,
+                                    child: Image.asset(
                                       'assets/icons/home_black.png',
                                     ),
-                            ),
+                                  ),
                             Text(
                               'Beranda',
                               style: (selectedIndex == 0)
@@ -75,17 +80,22 @@ class NavbarView extends GetView<NavbarController> {
                         },
                         child: Column(
                           children: [
-                            SizedBox(
-                              width: 25,
-                              height: 25,
-                              child: selectedIndex == 1
-                                  ? Image.asset(
-                                      'assets/icons/simulasi_white.png',
-                                    )
-                                  : Image.asset(
+                            selectedIndex == 1
+                                ? Container(
+                                    width: 3.w,
+                                    height: 3.w,
+                                    decoration: BoxDecoration(
+                                      color: colorBlack,
+                                      borderRadius: BorderRadius.circular(50.w),
+                                    ),
+                                  )
+                                : SizedBox(
+                                    width: 25,
+                                    height: 25,
+                                    child: Image.asset(
                                       'assets/icons/simulasi_black.png',
                                     ),
-                            ),
+                                  ),
                             Text(
                               'Simulasi',
                               style: (selectedIndex == 1)
@@ -99,6 +109,7 @@ class NavbarView extends GetView<NavbarController> {
                           ],
                         ),
                       ),
+                      Container(),
                       GestureDetector(
                         onTap: () {
                           if (onTap != null) {
@@ -107,17 +118,22 @@ class NavbarView extends GetView<NavbarController> {
                         },
                         child: Column(
                           children: [
-                            SizedBox(
-                              width: 25,
-                              height: 25,
-                              child: selectedIndex == 2
-                                  ? Image.asset(
-                                      'assets/icons/activity_white.png',
-                                    )
-                                  : Image.asset(
+                            selectedIndex == 2
+                                ? Container(
+                                    width: 3.w,
+                                    height: 3.w,
+                                    decoration: BoxDecoration(
+                                      color: colorBlack,
+                                      borderRadius: BorderRadius.circular(50.w),
+                                    ),
+                                  )
+                                : SizedBox(
+                                    width: 25,
+                                    height: 25,
+                                    child: Image.asset(
                                       'assets/icons/activity_black.png',
                                     ),
-                            ),
+                                  ),
                             Text(
                               'Riwayat',
                               style: (selectedIndex == 2)
@@ -139,17 +155,22 @@ class NavbarView extends GetView<NavbarController> {
                         },
                         child: Column(
                           children: [
-                            SizedBox(
-                              width: 25,
-                              height: 25,
-                              child: selectedIndex == 3
-                                  ? Image.asset(
-                                      'assets/icons/user_white.png',
-                                    )
-                                  : Image.asset(
+                            selectedIndex == 3
+                                ? Container(
+                                    width: 3.w,
+                                    height: 3.w,
+                                    decoration: BoxDecoration(
+                                      color: colorBlack,
+                                      borderRadius: BorderRadius.circular(50.w),
+                                    ),
+                                  )
+                                : SizedBox(
+                                    height: 25,
+                                    width: 25,
+                                    child: Image.asset(
                                       'assets/icons/user_black.png',
                                     ),
-                            ),
+                                  ),
                             Text(
                               'Akun',
                               style: (selectedIndex == 3)
@@ -166,6 +187,33 @@ class NavbarView extends GetView<NavbarController> {
                     ],
                   ),
                 ],
+              ),
+            ),
+          ),
+        ),
+        Positioned(
+          bottom: 3.h,
+          left: 45.w,
+          right: 40.w,
+          child: Container(
+            height: 15.w,
+            width: 15.w,
+            decoration: BoxDecoration(
+              color: colorPrimer2,
+              boxShadow: [
+                BoxShadow(
+                  color: colorGrey.withOpacity(0.4),
+                  spreadRadius: 1,
+                  blurRadius: 1,
+                ),
+              ],
+              borderRadius: BorderRadius.circular(50.w),
+            ),
+            child: Center(
+              child: Icon(
+                Icons.add,
+                color: colorBlack,
+                size: 30,
               ),
             ),
           ),
